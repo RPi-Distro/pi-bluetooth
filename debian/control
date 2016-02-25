@@ -1,0 +1,13 @@
+Source: pi-bluetooth
+Section: misc
+Priority: optional
+Maintainer: Serge Schneider <serge@raspberrypi.org>
+Build-Depends: debhelper (>= 9), dh-systemd (>= 1.5)
+Standards-Version: 3.9.6
+Homepage: https://github.com/RPi-Distro/rpi-bluetooth
+
+Package: pi-bluetooth
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, bluez, bluez-firmware
+Description: Raspberry Pi 3 bluetooth
+ Loads BCM43430A1 firmware on boot

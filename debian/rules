@@ -1,0 +1,10 @@
+#!/usr/bin/make -f
+
+DPKG_EXPORT_BUILDFLAGS = 1
+
+%:
+	dh $@ --with systemd
+
+override_dh_installinit:
+	dh_systemd_enable --name=hciuart
+	dh_installinit --name=hciuart

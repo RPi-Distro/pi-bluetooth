@@ -1,0 +1,5 @@
+pi-bluetooth (0.1.0) jessie; urgency=low
+
+  * Initial Release.
+
+ -- Serge Schneider <serge@raspberrypi.org>  Thu, 25 Feb 2016 03:45:33 +0000
