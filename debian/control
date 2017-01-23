@@ -8,6 +8,6 @@ Homepage: https://github.com/RPi-Distro/rpi-bluetooth
 
 Package: pi-bluetooth
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}, bluez, bluez-firmware
+Depends: ${shlibs:Depends}, ${misc:Depends}, bluez, bluez-firmware, raspberrypi-sys-mods
 Description: Raspberry Pi 3 bluetooth
  Loads BCM43430A1 firmware on boot

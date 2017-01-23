@@ -1,3 +1,11 @@
+pi-bluetooth (0.1.2) jessie; urgency=medium
+
+  * Add dependency on raspberrypi-sys-mods, which must be present for
+    /dev/serial1 to exist
+  * Do not restart service on upgrade
+
+ -- Serge Schneider <serge@raspberrypi.org>  Mon, 23 Jan 2017 13:31:12 +0000
+
 pi-bluetooth (0.1.1) jessie; urgency=medium
 
   * Use /dev/serial1
