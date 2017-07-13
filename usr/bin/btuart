@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 HCIATTACH=/usr/bin/hciattach
 SERIAL=`grep Serial /proc/cpuinfo | cut -c19-`
