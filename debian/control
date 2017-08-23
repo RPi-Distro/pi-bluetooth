@@ -4,7 +4,7 @@ Priority: optional
 Maintainer: Serge Schneider <serge@raspberrypi.org>
 Build-Depends: debhelper (>= 9), dh-systemd (>= 1.5)
 Standards-Version: 3.9.6
-Homepage: https://github.com/RPi-Distro/rpi-bluetooth
+Homepage: https://github.com/RPi-Distro/pi-bluetooth
 
 Package: pi-bluetooth
 Architecture: any
