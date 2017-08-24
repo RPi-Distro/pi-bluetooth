@@ -1,3 +1,9 @@
+pi-bluetooth (0.1.6) stretch; urgency=medium
+
+  * btuart: Set BT MAC address using hciattach
+
+ -- Serge Schneider <serge@raspberrypi.org>  Wed, 23 Aug 2017 16:38:41 +0100
+
 pi-bluetooth (0.1.4) stretch; urgency=medium
 
   * Add 'Wants' for dev-serial1.device
