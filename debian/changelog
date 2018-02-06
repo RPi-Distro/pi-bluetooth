@@ -1,3 +1,9 @@
+pi-bluetooth (0.1.7) stretch; urgency=medium
+
+  * Change package type to 'all'
+
+ -- Serge Schneider <serge@raspberrypi.org>  Tue, 06 Feb 2018 11:51:55 +0000
+
 pi-bluetooth (0.1.6) stretch; urgency=medium
 
   * btuart: Set BT MAC address using hciattach
