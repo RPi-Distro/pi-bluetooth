@@ -1,3 +1,9 @@
+pi-bluetooth (0.1.8) stretch; urgency=medium
+
+  * For on-board BT, route SCO packets to the HCI interface (enables HFP/HSP)
+
+ -- Serge Schneider <serge@raspberrypi.org>  Mon, 04 Jun 2018 14:53:18 +0100
+
 pi-bluetooth (0.1.7) stretch; urgency=medium
 
   * Change package type to 'all'

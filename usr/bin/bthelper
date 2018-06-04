@@ -1,0 +1,12 @@
+#!/bin/sh
+
+# For on-board BT, route SCO packets to the HCI interface (enables HFP/HSP)
+retries=0
+while [ $retries -lt 30 ]; do
+ dev="$(hcitool dev | sed -n 's/^\s\+\(hci0\)\s\+B8:27:EB:.*/\1/p')"
+ if [ "$dev" != "" ]; then
+  /usr/bin/hcitool -i "$dev" cmd 0x3f 0x1c 0x01 0x02 0x00 0x01 0x01 > /dev/null
+  break
+ fi
+ retries=$((retries + 1))
+done

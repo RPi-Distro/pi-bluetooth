@@ -1,0 +1,11 @@
+[Unit]
+Description=Raspberry Pi bluetooth helper
+Requires=bluetooth.service
+After=bluetooth.service
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/bthelper
+
+[Install]
+WantedBy=bluetooth.target
