@@ -1,8 +1,7 @@
 [Unit]
 Description=Configure Bluetooth Modems connected by UART
 ConditionPathIsDirectory=/proc/device-tree/soc/gpio@7e200000/bt_pins
-Before=bluetooth.service
-Wants=dev-serial1.device
+Requires=dev-serial1.device
 After=dev-serial1.device
 
 [Service]
