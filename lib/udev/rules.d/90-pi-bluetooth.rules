@@ -1,0 +1,2 @@
+# Raspberry Pi bluetooth module: enable routing of SCO packets to the HCI interface
+ACTION=="add", SUBSYSTEM=="bluetooth", KERNEL=="hci[0-9]", TAG+="systemd", ENV{SYSTEMD_WANTS}+="bthelper@%k.service"
