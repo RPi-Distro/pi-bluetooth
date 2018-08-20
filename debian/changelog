@@ -1,3 +1,9 @@
+pi-bluetooth (0.1.9) stretch; urgency=medium
+
+  * Do not wait for hciuart before staring bluetoothd
+
+ -- Serge Schneider <serge@raspberrypi.org>  Thu, 09 Aug 2018 13:40:13 +0100
+
 pi-bluetooth (0.1.8) stretch; urgency=medium
 
   * For on-board BT, route SCO packets to the HCI interface (enables HFP/HSP)
