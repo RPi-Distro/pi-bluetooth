@@ -1,3 +1,10 @@
+pi-bluetooth (0.1.11) buster; urgency=medium
+
+  * Don't override the BT address on Pi 4
+  * Update control file for Buster
+
+ -- Serge Schneider <serge@raspberrypi.org>  Tue, 18 Jun 2019 12:04:46 +0100
+
 pi-bluetooth (0.1.10) stretch; urgency=medium
 
   * Improved hciuart service condition

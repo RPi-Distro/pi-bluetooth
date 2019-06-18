@@ -2,8 +2,8 @@ Source: pi-bluetooth
 Section: misc
 Priority: optional
 Maintainer: Serge Schneider <serge@raspberrypi.org>
-Build-Depends: debhelper (>= 9), dh-systemd (>= 1.5)
-Standards-Version: 3.9.6
+Build-Depends: debhelper (>= 9.20160709)
+Standards-Version: 4.3.0
 Homepage: https://github.com/RPi-Distro/pi-bluetooth
 
 Package: pi-bluetooth
