@@ -11,6 +11,6 @@ fi
 dev="$1"
 # Need to bring hci up before looking at MAC as it can be all zeros during init
 /bin/hciconfig "$dev" up
-/bin/hciconfig "$dev" |grep -q "BD Address: B8:27:EB:" || exit 0
+/bin/hciconfig "$dev" | grep -qE "BD Address: (B8:27:EB|DC:A6:32):" || exit 0
 /usr/bin/hcitool -i "$dev" cmd 0x3f 0x1c 0x01 0x02 0x00 0x01 0x01 > /dev/null
 
