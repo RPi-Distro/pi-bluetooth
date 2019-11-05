@@ -1,3 +1,10 @@
+pi-bluetooth (0.1.12) buster; urgency=medium
+
+  [ Phil Elwell ]
+  * bthelper: Recognise Pi 4 OUI (#10)
+
+ -- Serge Schneider <serge@raspberrypi.org>  Tue, 05 Nov 2019 13:00:15 +0000
+
 pi-bluetooth (0.1.11) buster; urgency=medium
 
   * Don't override the BT address on Pi 4
