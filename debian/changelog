@@ -1,3 +1,10 @@
+pi-bluetooth (0.1.13) buster; urgency=medium
+
+  [ Phil Elwell ]
+  * bthelper: Force reinitialisation to allow Secure Simple Pairing
+
+ -- Serge Schneider <serge@raspberrypi.com>  Tue, 26 May 2020 07:13:54 +0100
+
 pi-bluetooth (0.1.12) buster; urgency=medium
 
   [ Phil Elwell ]
