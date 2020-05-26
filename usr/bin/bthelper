@@ -8,6 +8,11 @@ if [ "$#" -ne 1 ]; then
    exit 0
 fi
 
+# Force reinitialisation to allow extra features such as Secure Simple Pairing
+# to be enabled
+/usr/bin/bluetoothctl power off
+/usr/bin/bluetoothctl power on
+
 dev="$1"
 # Need to bring hci up before looking at MAC as it can be all zeros during init
 /bin/hciconfig "$dev" up
