@@ -6,6 +6,7 @@ After=dev-serial1.device
 
 [Service]
 Type=forking
+EnvironmentFile=-/etc/default/hciuart
 ExecStart=/usr/bin/btuart
 
 [Install]

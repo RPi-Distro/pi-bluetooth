@@ -1,7 +1,13 @@
 #!/bin/sh
 
 HCIATTACH=/usr/bin/hciattach
-if grep -q "Pi 4" /proc/device-tree/model; then
+if [ -n "$BDADDR" ]; then
+  # Allow environment override of BDADDR via the init service.
+  # Shouldn't be needed in normal cases; exceptions include Raspberry
+  # Pi 4 systems with bluez which don't have raspberry-pi-mods.patch
+  # applied.
+  true
+elif grep -q "Pi 4" /proc/device-tree/model; then
   BDADDR=
 else
   SERIAL=`cat /proc/device-tree/serial-number | cut -c9-`
