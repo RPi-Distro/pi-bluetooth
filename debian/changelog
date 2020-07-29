@@ -1,3 +1,10 @@
+pi-bluetooth (0.1.14) buster; urgency=medium
+
+  [ Phil Elwell ]
+  * bthelper: Add the ability to set the Pi BDADDR
+
+ -- Serge Schneider <serge@raspberrypi.com>  Wed, 29 Jul 2020 09:24:14 +0100
+
 pi-bluetooth (0.1.13) buster; urgency=medium
 
   [ Phil Elwell ]
