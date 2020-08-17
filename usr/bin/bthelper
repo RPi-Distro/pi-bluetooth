@@ -13,8 +13,10 @@ dev=$1
 
 # Need to bring hci up before looking at MAC as it can be all zeros during init
 /bin/hciconfig $dev up
-/bin/hciconfig $dev | grep -q "Bus: UART" ||
-    (echo Not a UART-attached BT Modem; exit 0)
+if ! /bin/hciconfig $dev | grep -q "Bus: UART"; then
+    echo Not a UART-attached BT Modem
+    exit 0
+fi
 
 if ( /usr/bin/bdaddr -i "$dev" | grep -q -E '\s(B8:27:EB:|DC:A6:32:)' ); then
     echo Raspberry Pi BDADDR already set
