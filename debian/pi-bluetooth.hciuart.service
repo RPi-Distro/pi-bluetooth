@@ -5,7 +5,7 @@ Requires=dev-serial1.device
 After=dev-serial1.device
 
 [Service]
-Type=forking
+Type=simple
 ExecStart=/usr/bin/btuart
 
 [Install]
