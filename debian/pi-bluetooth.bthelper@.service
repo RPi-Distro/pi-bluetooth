@@ -4,5 +4,6 @@ Requires=bluetooth.service
 After=bluetooth.service
 
 [Service]
-Type=simple
+Type=oneshot
 ExecStart=/usr/bin/bthelper %I
+RemainAfterExit=yes
