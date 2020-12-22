@@ -18,9 +18,7 @@ if ! /bin/hciconfig $dev | grep -q "Bus: UART"; then
     exit 0
 fi
 
-if ( /usr/bin/hcitool -i $dev dev | grep -q -E '\s(B8:27:EB:|DC:A6:32:)' ); then
-    echo Raspberry Pi BDADDR already set
-else
+if ( /usr/bin/hcitool -i $dev dev | grep -q -E '\s43:4[35]:' ); then
     SERIAL=`cat /proc/device-tree/serial-number | cut -c9-`
     B1=`echo $SERIAL | cut -c3-4`
     B2=`echo $SERIAL | cut -c5-6`
@@ -29,6 +27,8 @@ else
 
     /usr/bin/hcitool -i $dev cmd 0x3f 0x001 $BDADDR
     /bin/hciconfig $dev reset
+else
+    echo Raspberry Pi BDADDR already set
 fi
 
 # Force reinitialisation to allow extra features such as Secure Simple Pairing
