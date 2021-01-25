@@ -1,7 +1,7 @@
 #!/bin/sh
 
 HCIATTACH=/usr/bin/hciattach
-if grep -q "Pi 4" /proc/device-tree/model; then
+if grep -q "raspberrypi,4" /proc/device-tree/compatible; then
   BDADDR=
 else
   SERIAL=`cat /proc/device-tree/serial-number | cut -c9-`
