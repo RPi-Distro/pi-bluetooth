@@ -11,7 +11,8 @@ else
   BDADDR=`printf b8:27:eb:%02x:%02x:%02x $((0x$B1 ^ 0xaa)) $((0x$B2 ^ 0xaa)) $((0x$B3 ^ 0xaa))`
 fi
 
-if ( /usr/bin/hcitool dev | grep -q -E '\s(B8:27:EB:|DC:A6:32:)' ); then
+# Bail out if the kernel is managing the Bluetooth modem initialisation
+if ( dmesg | grep -q -E "hci[0-9]+: BCM: chip" ); then
   # On-board bluetooth is already enabled
   exit 0
 fi
