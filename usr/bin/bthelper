@@ -31,10 +31,11 @@ else
     echo Raspberry Pi BDADDR already set
 fi
 
-# Force reinitialisation to allow extra features such as Secure Simple Pairing
-# to be enabled
-/usr/bin/bluetoothctl power off
-/usr/bin/bluetoothctl power on
-
 # Route SCO packets to the HCI interface (enables HFP/HSP)
 /usr/bin/hcitool -i $dev cmd 0x3f 0x1c 0x01 0x02 0x00 0x01 0x01 > /dev/null
+
+# Force reinitialisation to allow extra features such as Secure Simple Pairing
+# to be enabled, for currently unknown reasons. This requires bluetoothd to be
+# running, which it isn't yet. Use this kludge of forking off another shell
+# with a delay, pending a complete understanding of the issues.
+(sleep 5; /usr/bin/bluetoothctl power off; /usr/bin/bluetoothctl power on) &
