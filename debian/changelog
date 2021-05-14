@@ -1,9 +1,25 @@
+pi-bluetooth (0.1.16) buster; urgency=medium
+
+  [ Phil Elwell ]
+  * bthelper: Detect unprogrammed devices instead
+  * Multiple fixes
+
+  [ Dave Jones ]
+  * Widen match for CM4 compatibility
+
+  [ Petar Obradović ]
+  * Change service unit type to "oneshot" (#17)
+
+  [ Cameron Miller ]
+  * Fixes RPI-Distro/pi-bluetooth#18
+
+ -- Serge Schneider <serge@raspberrypi.com>  Fri, 14 May 2021 11:55:01 +0100
+
 pi-bluetooth (0.1.15) buster; urgency=medium
 
   [ Phil Elwell ]
   * bthelper: Change BT address with hcitool instead
   * bthelper: FIX: Only run for onboard BT modems
-
 
  -- Serge Schneider <serge@raspberrypi.com>  Wed, 19 Aug 2020 15:45:46 +0100
 
