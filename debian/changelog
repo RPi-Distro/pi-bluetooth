@@ -1,3 +1,10 @@
+pi-bluetooth (0.1.17) buster; urgency=medium
+
+  [ Phil Elwell ]
+  * Another systemd service adjustment
+
+ -- Serge Schneider <serge@raspberrypi.com>  Fri, 21 May 2021 15:36:01 +0100
+
 pi-bluetooth (0.1.16) buster; urgency=medium
 
   [ Phil Elwell ]
