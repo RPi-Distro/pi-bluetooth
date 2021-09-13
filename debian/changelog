@@ -1,3 +1,9 @@
+pi-bluetooth (0.1.18) buster; urgency=medium
+
+  * Do not start hciuart service on install or upgrade
+
+ -- Serge Schneider <serge@raspberrypi.com>  Fri, 10 Sep 2021 16:33:21 +0100
+
 pi-bluetooth (0.1.17) buster; urgency=medium
 
   [ Phil Elwell ]
