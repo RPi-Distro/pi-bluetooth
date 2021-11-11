@@ -1,2 +1,8 @@
+# Create /dev/serialN symlinks (required by the bluetooth modem firmware). The
+# logic below deals with the different serial UARTs on different models of Pi
+# and ensures that /dev/serial1 (which hciuart.service relies upon) points to
+# the correct UART device
+KERNEL=="ttyAMA0|ttyAMA1|ttyS0", PROGRAM="/usr/bin/btserial %k", SYMLINK+="serial%c"
+
 # Raspberry Pi bluetooth module: enable routing of SCO packets to the HCI interface
 ACTION=="add", SUBSYSTEM=="bluetooth", KERNEL=="hci[0-9]", TAG+="systemd", ENV{SYSTEMD_WANTS}+="bthelper@%k.service"
