@@ -18,7 +18,7 @@ if ! /bin/hciconfig $dev | grep -q "Bus: UART"; then
     exit 0
 fi
 
-if ( /usr/bin/hcitool -i $dev dev | grep -q -E '\s43:4[35]:' ); then
+if ( /usr/bin/hcitool -i $dev dev | grep -q -E '\s43:4[35]:|AA:AA:AA:AA:AA:AA' ); then
     SERIAL=`cat /proc/device-tree/serial-number | cut -c9-`
     B1=`echo $SERIAL | cut -c3-4`
     B2=`echo $SERIAL | cut -c5-6`
