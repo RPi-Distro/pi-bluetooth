@@ -8,4 +8,4 @@ Type=forking
 ExecStart=/usr/bin/btuart
 
 [Install]
-WantedBy=multi-user.target
+WantedBy=dev-serial1.device
