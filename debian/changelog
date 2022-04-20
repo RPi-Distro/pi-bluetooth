@@ -1,3 +1,13 @@
+pi-bluetooth (0.1.19) bullseye; urgency=medium
+
+  [ Phil Elwell ]
+  * Add AA:AA:AA:AA:AA:AA as an "unprogrammed" address
+
+  [ Serge Schneider ]
+  * hciuart: change WantedBy to dev-serial1.device
+
+ -- Serge Schneider <serge@raspberrypi.com>  Wed, 13 Apr 2022 14:34:48 +0100
+
 pi-bluetooth (0.1.18) buster; urgency=medium
 
   * Do not start hciuart service on install or upgrade

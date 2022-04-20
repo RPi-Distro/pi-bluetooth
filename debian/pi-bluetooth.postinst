@@ -1,0 +1,12 @@
+#!/bin/sh
+set -e
+
+# deb-systemd-helper doesn't properly update the link from multi-user.target to dev-serial1.device
+# We do so manually here:
+if [ "$1" = "configure" ] && dpkg --compare-versions "$2" lt-nl "0.1.19" ; then
+	if deb-systemd-helper --quiet was-enabled 'hciuart.service'; then
+		systemctl --quiet reenable 'hciuart.service'
+	fi
+fi
+
+#DEBHELPER#
